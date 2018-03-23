@@ -9,7 +9,7 @@ import java.io.File;
 public class Main {
 
     public static void main(String[] args) {
-        Cart andrewCart = new Cart("andrew-cart");
+        Cart andrewCart = new Cart("tamara-cart");
 
         RealItem car = new RealItem();
         car.setName("Audi");
@@ -24,6 +24,7 @@ public class Main {
         andrewCart.addRealItem(car);
         andrewCart.addVirtualItem(disk);
         andrewCart.showItems();
+
 
         Parser parser = new JsonParser();
         parser.writeToFile(andrewCart);

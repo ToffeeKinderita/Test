@@ -11,11 +11,11 @@ public class Cart {
     private List<VirtualItem> virtualItems;
     private double total;
 
-    public Cart(String cartName) {
+      public Cart(String cartName) {
         this.cartName = cartName;
         realItems = new ArrayList<>();
         virtualItems = new ArrayList<>();
-    }
+      }
 
     public String getCartName() {
         return cartName;
@@ -34,7 +34,6 @@ public class Cart {
         virtualItems.add(item);
         total += item.getPrice() + item.getPrice()*TAX;
     }
-
     public void deleteVirtualItem(VirtualItem item) {
         virtualItems.remove(item);
     }
@@ -51,4 +50,5 @@ public class Cart {
     public double getTotalPrice() {
         return total;
     }
+
 }
