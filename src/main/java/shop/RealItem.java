@@ -1,7 +1,5 @@
 package shop;
 
-
-
 public class RealItem extends Item {
 
     private double weight;
@@ -19,7 +17,3 @@ public class RealItem extends Item {
         return super.toString() + "Weight: " + weight;
     }
 }
-
-
-
-
