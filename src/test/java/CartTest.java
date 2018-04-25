@@ -1,7 +1,8 @@
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import shop.Cart;
 import shop.RealItem;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class CartTest {
@@ -12,6 +13,6 @@ public class CartTest {
         RealItem phone = new RealItem();
         phone.setPrice(123);
         item.addRealItem(phone);
-        Assert.assertEquals("TotalPrice for item with Price 123 should be 147.6: ", 147.6, item.getTotalPrice(), 147.6);
+        assertEquals(147.6, item.getTotalPrice(), "TotalPrice for item with Price 123 should be 147.6");
     }
 }
