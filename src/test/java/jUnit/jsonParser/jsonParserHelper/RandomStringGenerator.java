@@ -1,4 +1,4 @@
-package jsonParser.jsonParserHelpers;
+package jUnit.jsonParser.jsonParserHelper;
 
 public class RandomStringGenerator {
     public static enum Mode {

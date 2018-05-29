@@ -1,3 +1,5 @@
+package jUnit;
+
 import org.junit.jupiter.api.Test;
 import shop.Cart;
 import shop.RealItem;

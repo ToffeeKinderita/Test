@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+    <test name="JSON Regression">
+        <groups>
+            <run>
+                <include name="JSONtestReg"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testNG.jsonTest.ParserNgTest"/>
+            <class name="testNG.jsonTest.JsonEmptyItemsNgTest"/>
+            <class name="testNG.jsonTest.ExceptionNgTest">
+                <parameter name="path" value="src/main/resources/exception.json"/>
+            </class>
+        </classes>
+    </test>
+</suite>

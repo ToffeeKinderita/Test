@@ -1,4 +1,4 @@
-package jsonParser.jsonParserTests;
+package jUnit.jsonParser.jsonParserTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -9,14 +9,17 @@ import shop.Cart;
 import shop.RealItem;
 import shop.VirtualItem;
 
-import java.io.*;
 
-import static jsonParser.jsonParserHelpers.RandomStringGenerator.Mode.NUMERIC;
-import static jsonParser.jsonParserHelpers.RandomStringGenerator.generateRandomString;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import static jUnit.jsonParser.jsonParserHelper.RandomStringGenerator.Mode.NUMERIC;
+import static jUnit.jsonParser.jsonParserHelper.RandomStringGenerator.generateRandomString;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class JsonParserTests {
+public class JsonParserTest {
     public Parser parser = new JsonParser();
     public Cart somecart = new Cart("Test" + generateRandomString(2, NUMERIC));
     public RealItem car = new RealItem();
