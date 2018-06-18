@@ -2,23 +2,13 @@ package testNG.jsonTest;
 
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import parser.JsonParser;
-import parser.Parser;
 import shop.Cart;
-import shop.RealItem;
-import shop.VirtualItem;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
-import static jUnit.jsonParser.jsonParserHelper.RandomStringGenerator.Mode.NUMERIC;
-import static jUnit.jsonParser.jsonParserHelper.RandomStringGenerator.generateRandomString;
 
 public class ParserNgTest extends ConfigurationClass {
 
@@ -35,6 +25,5 @@ public class ParserNgTest extends ConfigurationClass {
         soft.assertEquals(somecart.getTotalPrice(), 8248.8);
         soft.assertEquals(somecart.getClass(), Cart.class);
         soft.assertAll();
-
     }
 }
