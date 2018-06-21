@@ -1,4 +1,4 @@
-package jsonParser.jsonParserTests;
+package jUnit.jsonParser.jsonParserTest;
 
 import com.google.gson.JsonSyntaxException;
 import org.junit.jupiter.api.Assertions;
@@ -11,7 +11,7 @@ import parser.NoSuchFileException;
 import java.io.File;
 
 
-public class JsonExceptionsTests extends JsonParserTests {
+public class JsonExceptionsTest extends JsonParserTest {
 
     @Test
     @DisplayName("Test_No_Such_File_Exc")
@@ -23,7 +23,7 @@ public class JsonExceptionsTests extends JsonParserTests {
 
     @ParameterizedTest
     @DisplayName("Test_Json_Syntax_Exc")
-    @ValueSource(strings = {"badJson1.json", "badJson2.json", "pdf.pdf", "badJson3.json", "badJson4.json"})
+    @ValueSource(strings = {"badJson1.json", "badJson2.json", "2017-Scrum-Guide-US.pdf", "badJson3.json", "badJson4.json"})
     void test_JSONException(String path) {
         Assertions.assertThrows(JsonSyntaxException.class, () -> {
             parser.readFromFile(new File("src/main/resources/" + path));

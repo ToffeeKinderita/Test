@@ -1,4 +1,4 @@
-package jsonParser.jsonParserTests;
+package jUnit.jsonParser.jsonParserTest;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class JsonWithEmptyItemsTests extends JsonParserTests {
+public class JsonWithEmptyItemsTest extends JsonParserTest {
 
     @Test
     @DisplayName("Test_With_Cart_Name_and_no_Items")
